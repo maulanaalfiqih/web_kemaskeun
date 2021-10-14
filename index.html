@@ -7,7 +7,11 @@
 	<title>DE KEMASKEUN</title>
 	<link rel="icon" href="logo/LOGODEKEMASKEUN-03.png">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="tes.css">
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 </head>
 <body>
 	<div id="wrap">
@@ -46,8 +50,8 @@
 	<div class="container">
 		<section>
 			<img class="profil" src="logo/kemaskeun.png" alt="">
-			<h2><a id="dekemaskeun">De Kemaskeun</a> adalah sebuah perusahaan yang bergerak di bidang pembuatan kemasan untuk tiap jenis makanan dan minuman.
-				Yang membuat <a id="dekemaskeun">De Kemaskeun</a> unik adalah kemasan yang dihasilkan tidak mengandung plastik. Sangat ramah lingkungan bukan? Tunggu apa lagi ayo pesan sekarang!
+			<h2><b id="dekemaskeun">De Kemaskeun</b> adalah sebuah perusahaan yang bergerak di bidang pembuatan kemasan untuk tiap jenis makanan dan minuman.
+				Yang membuat <b id="dekemaskeun">De Kemaskeun</b> unik adalah kemasan yang dihasilkan tidak mengandung plastik. Sangat ramah lingkungan bukan? Tunggu apa lagi ayo pesan sekarang!
 			</h2><br><br>
 			<h1>Ragam Kemasan</h1>
 		</section>
@@ -116,6 +120,25 @@
 				</div>
 			</article>
 		</main>
+		<section>
+			<h1>Testimoni Pelanggan</h1><br><br>
+			<div class="wrapper">
+				<div class="carousel owl-carousel">
+				   <div class="card card-1">
+					  <img src="logo/comingsoon.jpg" alt="">
+				   </div>
+				   <div class="card card-2">
+					   <img src="logo/comingsoon.jpg" alt="">
+				   </div>
+				   <div class="card card-3">
+					   <img src="logo/comingsoon.jpg" alt="">
+				   </div>
+				   <div class="card card-3">
+					<img src="logo/comingsoon.jpg" alt="">
+				</div>
+				</div>
+			 </div>
+		</section>
 	</div>
 	</div>
 	<footer>
@@ -123,6 +146,28 @@
 		</footer>
 
 <script>
+ $(".carousel").owlCarousel({
+           margin: 20,
+           loop: true,
+           autoplay: true,
+           autoplayTimeout: 2000,
+           autoplayHoverPause: true,
+           responsive: {
+             0:{
+               items:1,
+               nav: false
+             },
+             600:{
+               items:2,
+               nav: false
+             },
+             1000:{
+               items:3,
+               nav: false
+             }
+           }
+         });
+
 let nav = document.querySelector('nav');
 let dropdown = nav.querySelector('.dropdown');
 let dropdownToggle = nav.querySelector("[data-action='dropdown-toggle']");
