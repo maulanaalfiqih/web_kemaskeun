@@ -7,11 +7,14 @@
 	<title>DE KEMASKEUN</title>
 	<link rel="icon" href="logo/LOGODEKEMASKEUN-03.png">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="alert.css">
 	<link rel="stylesheet" href="tes.css">
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 	<div id="wrap">
@@ -48,6 +51,15 @@
 			</ul>
 		</nav>
 	<div class="container">
+		<section>
+			<button class="btn-alert">Show Alert</button>
+			<div class="alert hide">
+			   <span class="msg">Data Pengumuman Tidak Ditemukan!</span>
+			   <div class="close-btn">
+				  <span class="fas fa-times"></span>
+			   </div>
+			</div>
+		</section>
 		<section>
 			<img class="profil" src="logo/kemaskeun.png" alt="">
 			<h2><b id="dekemaskeun">De Kemaskeun</b> adalah sebuah perusahaan yang bergerak di bidang pembuatan kemasan untuk tiap jenis makanan dan minuman.
@@ -146,6 +158,20 @@
 		</footer>
 
 <script>
+	$('button').click(function(){
+   		$('.alert').addClass("show");
+    	$('.alert').removeClass("hide");
+    	$('.alert').addClass("showAlert");
+    	setTimeout(function(){
+        $('.alert').removeClass("show");
+        $('.alert').addClass("hide");
+        },5000);
+         });
+    $('.close-btn').click(function(){
+        $('.alert').removeClass("show");
+        $('.alert').addClass("hide");
+    });
+
  $(".carousel").owlCarousel({
            margin: 20,
            loop: true,
